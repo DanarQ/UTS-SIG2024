@@ -16,23 +16,25 @@ function Map() {
 
   return (
     <>
-      <MapContainer
-        center={[-0.027155105381071975, 109.34528341107193]}
-        zoom={13}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        ></TileLayer>
-        <MarkerClusterGroup chunkedLoading>
-          {markers.map((marker) => (
-            //ini kita mengambil props variabel marker dan untuk posisi marker nya
-            <Marker key={marker.id} position={[marker.lat, marker.lng]}>
-              <Popup>{marker.nama}</Popup>
-            </Marker>
-          ))}
-        </MarkerClusterGroup>
-      </MapContainer>
+      <div className="container">
+        <MapContainer
+          center={[-0.027155105381071975, 109.34528341107193]}
+          zoom={13}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          ></TileLayer>
+          <MarkerClusterGroup chunkedLoading>
+            {markers.map((marker) => (
+              //ini kita mengambil props variabel marker dan untuk posisi marker nya
+              <Marker key={marker.id} position={[marker.lat, marker.lng]}>
+                <Popup>{marker.nama}</Popup>
+              </Marker>
+            ))}
+          </MarkerClusterGroup>
+        </MapContainer>
+      </div>
     </>
   );
 }
