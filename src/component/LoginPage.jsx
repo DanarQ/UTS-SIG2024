@@ -46,11 +46,13 @@ function LoginPage() {
                   <div className="card-body p-md-5 mx-md-4">
                     <div className="text-center">
                       <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                        src="src/assets/unipontiLogo.jpg"
                         style={{ width: "185px" }}
                         alt="logo"
                       />
-                      <h4 className="mt-1 mb-5 pb-1">UNIPONTI</h4>
+                      <h4 className="mt-1 mb-5 pb-1 h2 font-weight-bold">
+                        UNIPONTI
+                      </h4>
                     </div>
                     {error && <div className="alert alert-danger">{error}</div>}
                     <form onSubmit={handleLogin}>

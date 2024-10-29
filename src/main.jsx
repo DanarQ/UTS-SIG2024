@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <CreateMap></CreateMap>,
   },
   {
-    path: "/editmap",
+    path: "/editmap/:id",
     element: <EditMap></EditMap>,
   },
 ]);

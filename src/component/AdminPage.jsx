@@ -28,8 +28,8 @@ function AdminPage() {
       <div className={`l-navbar ${isActive ? "show" : ""}`} id="nav-bar">
         <nav className="nav">
           <div>
-            <NavLink to="/readmap" className="nav_logo">
-              <i className="bx bx-layer nav_logo-icon"></i>
+            <NavLink className="nav_logo">
+              <i className="bx bxs-school nav_logo-icon"></i>
               <span className="nav_logo-name">UniPonti</span>
             </NavLink>
             <div className="nav_list">
@@ -39,7 +39,7 @@ function AdminPage() {
                   `nav_link ${isActive ? "active" : ""}`
                 }
               >
-                <i className="bx bx-grid-alt nav_icon"></i>
+                <i className="bx bx-map-alt nav_icon"></i>
                 <span className="nav_name">Read Map</span>
               </NavLink>
               <NavLink
@@ -48,19 +48,11 @@ function AdminPage() {
                   `nav_link ${isActive ? "active" : ""}`
                 }
               >
-                <i className="bx bx-user nav_icon"></i>
+                <i className="bx bx-map nav_icon"></i>
                 <span className="nav_name">Create Map</span>
               </NavLink>
-              <NavLink
-                to="/editmap"
-                className={({ isActive }) =>
-                  `nav_link ${isActive ? "active" : ""}`
-                }
-              >
-                <i className="bx bx-message-square-detail nav_icon"></i>
-                <span className="nav_name">Edit Map</span>
-              </NavLink>
-              {/* Add more NavLink components as needed */}
+
+              {/* Bisa nambah kan another nav disini */}
             </div>
           </div>
           <NavLink to="/" className="nav_link">

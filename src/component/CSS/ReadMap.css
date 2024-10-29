@@ -1,0 +1,31 @@
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Reduce padding and font size on smaller screens */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Hide Latitude and Longitude on very small screens (if needed) */
+@media (max-width: 850px) {
+  .table th:nth-child(3),
+  .table th:nth-child(4),
+  .table td:nth-child(3),
+  .table td:nth-child(4) {
+    display: none;
+  }
+}

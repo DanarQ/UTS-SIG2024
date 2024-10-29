@@ -6,12 +6,20 @@ import "leaflet/dist/leaflet.css";
 
 function Map() {
   const [markers, setMarkers] = useState([]);
-  useEffect(() => {
-    // mengambil API dari localhost php
+  const fetchMarkers = () => {
     fetch("http://localhost/uniponti/get_uni.php")
       .then((response) => response.json())
       .then((data) => setMarkers(data))
       .catch((error) => console.error("Error fetching data:", error));
+  };
+
+  useEffect(() => {
+    fetchMarkers();
+
+    const interval = setInterval(fetchMarkers, 2000); // (2000ms = 2 seconds)
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
